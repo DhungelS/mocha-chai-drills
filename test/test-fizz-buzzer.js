@@ -14,13 +14,18 @@ describe('Test', function () {
 
   // let test = fizzBuzz();
 
-  const inputOne = 3;
-  const inputTwo = 'Three';
+  const inputs = [
+    {input: 2},
+    {input: 3}
+  ];
   
  
 
   it('should raise error if args not numbers', function () {
-    const answer = fizzBuzz(inputOne);
-    expect(answer);
+    inputs.forEach(input => {
+      console.log(input.input);
+      const answer = fizzBuzz(input.input);
+      expect(answer);
+    });
   });
 });
